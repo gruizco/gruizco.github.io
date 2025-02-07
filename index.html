@@ -1,22 +1,15 @@
 <html>
   <body>
-    Here is one mermaid diagram:
+    Flujo de ingresos en cuenta corriente:
     <pre class="mermaid">
-            graph TD
-            A[Client] --> B[Load Balancer]
-            B --> C[Server1]
-            B --> D[Server2]
-    </pre>
+            flowchart TD
+			A[Ingreso en cuenta corriente] -->|Nómina KYRETABI SARRALLE GROUP, S. L.| B[Inversión 100% en LU0731782826]
+			A -->|Otro tipo de ingreso| C[Se acumula en cuenta corriente]
+			C -->|Uso de tarjeta de débito| D[Gastos diarios]
+			C -->|Transferencias salientes| E[Otras cuentas]
+			B -->|Dividendos generados| C
 
-    And here is another:
-    <pre class="mermaid">
-            graph TD
-            A[Client] -->|tcp_123| B
-            B(Load Balancer)
-            B -->|tcp_456| C[Server1]
-            B -->|tcp_456| D[Server2]
     </pre>
-
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
       mermaid.initialize({ startOnLoad: true });
